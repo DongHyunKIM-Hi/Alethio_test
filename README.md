@@ -2,6 +2,8 @@
 
 ## 구성
 
+편한 겁사를 위해 food 50개, clothes 11개로 설정
+
 ### model
 
 - dto
