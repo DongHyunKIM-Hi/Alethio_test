@@ -25,7 +25,7 @@ public class OrderService {
     private final OrderItemRepository orderRepository;
 
     public OrderItem order(RequestDto requestDto){
-        ProductDto item = check_exists(requestDto.getItems());
+        ProductDto item = check_product(requestDto.getItems());
         check_amount(item);
         log.info("주문사항을 저장합니다.");
         OrderItem order = new OrderItem(requestDto);
@@ -33,7 +33,7 @@ public class OrderService {
         return order;
     }
 
-    public ProductDto check_exists(ItemsDto itemsDto) {
+    public ProductDto check_product(ItemsDto itemsDto) {
         log.info("상품을 조회합니다.");
         switch (itemsDto.getItemType()) {
             case "food":
