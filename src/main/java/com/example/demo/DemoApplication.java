@@ -20,7 +20,7 @@ public class DemoApplication {
     public CommandLineRunner demo(ClothesRepository clothesRepository, FoodRepository foodRepository) {
         return (args) -> {
             Clothes clothes = new Clothes(11L,"A청바지", "clothes");
-            Food food = new Food(100L, "떡볶이", "food");
+            Food food = new Food(50L, "떡볶이", "food");
             clothesRepository.save(clothes);
             foodRepository.save(food);
         };
