@@ -31,6 +31,6 @@ public class Product {
     public Product(ProductDto productDto){
         this.name = productDto.getName();
         this.decodeName =productDto.getDecodeName();
-        this.amount = 100L;
+        this.amount = productDto.getAmount();
     }
 }
